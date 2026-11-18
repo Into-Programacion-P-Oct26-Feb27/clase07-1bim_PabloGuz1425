@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo02 {
+public class Ejemplo022 {
     /**
      * @param args the command line arguments
      */
@@ -20,20 +20,26 @@ public class Ejemplo02 {
         entrada.useLocale(Locale.US);
         int limite;
         int contador = 1;
+        int suma = 0;
+        int multiplicacion = 1;
+        
         System.out.println("Ingrese el Límite"); 
         limite = entrada.nextInt(); // 6
         while (contador <= limite){
             
             if (contador%2!=0) {
-                System.out.printf("Contador %d\n", 
-                    contador);
+                multiplicacion = multiplicacion * contador;
+            }else{
+                suma = suma + contador;
+                
             }
             
             contador = contador + 1;
         }
-        
+        System.out.printf("La suma de los pares es %d\n",suma);
+        System.out.printf("La multiplicacion de los Impares es %d\n",multiplicacion);
     }
 }
 /*
-
+La suma de los pares y se presente la multiplicacion de los impares
 */
